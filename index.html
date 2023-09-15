@@ -1,0 +1,310 @@
+<html>
+
+<head>
+  <title>Restaurant Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <style>
+    #order {
+      appearance: none;
+      background-color: #FFFFFF;
+      border-radius: 40em;
+      border-style: none;
+      box-shadow: #ADCFFF 0 -12px 6px inset;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -.24px;
+      margin: 0;
+      outline: none;
+      padding: 1rem 1.3rem;
+      quotes: auto;
+      text-align: center;
+      text-decoration: none;
+      transition: all .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      height: 60px;
+      width: 200px;
+    }
+
+    #order:hover {
+      background-color: #FFC229;
+      box-shadow: #FF6314 0 -6px 8px inset;
+      transform: scale(1.125);
+    }
+
+    #order:active {
+      transform: scale(1.025);
+    }
+
+    @media (min-width: 768px) {
+      #order {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu-section {
+      background-color: cadetblue;
+      height: 105%;
+      width: 102%;
+    }
+
+    .about-section {
+      background-color: cadetblue;
+      height: 105%;
+      width: 102%;
+    }
+
+    .contact-section {
+      background-color: cadetblue;
+      height: 105%;
+      width: 102%;
+    }
+    #p1{
+      text-align: left;
+      font-size: larger;
+font-family:Arial, Helvetica, sans-serif;;
+    }
+    #img1{
+     margin-left: 10px;
+     margin-top: 60px;
+      height: 52px;
+      width: 50px;
+    }
+    #img2{
+      margin-left: 600px;
+      margin-top: -51px;
+      height: 50px;
+      width: 50px;
+    }
+    #img3{
+      margin-left: 1250px;
+      margin-top: -47px;
+      height: -10px;
+      width: 50px;
+    }
+    #contact{
+      margin-left: -400px;
+    }
+    form {
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type="text"]
+{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- lp section -->
+  <div id="lp">
+    <div class="top">
+      <div class="logo">SNYRVresto</div>
+      <div class="nav">
+
+        <a href="#menu-sec">Menu</a>
+        <a href="#about-sec" class="nav-link">About</a>
+        <a href="https://www.google.com/maps/place/Hotel+Dazzle/@16.6836591,74.4651915,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc0e331fc974e33:0xd7f44505fca32d83!8m2!3d16.6836591!4d74.4677664!16s%2Fg%2F11fn6cw6vy"
+          target="_blank">Location</a>
+        <a href="#con-sec">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="heading">
+      <div class="left">
+        <p>Are You Hungry?</p>
+        <h1>Don't Wait</h1>
+        <p>Let start to order food now</p>
+        <br>
+        <button onclick="order()" id="order">Order Now</button>
+      </div>
+
+      <div class="right" id="foods"></div>
+
+      <div class="SocialMedia">
+        <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="menu">
+        <div id="food1"></div>
+        <div id="food2"></div>
+        <div id="food3"></div>
+        <div id="food4"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- menu section -->
+  <div id="menu-sec">
+    <div class="menu-section">
+      <h1>Menu</h1><br>
+      <p style="text-align: center; font-size: larger; font-family:Arial, Helvetica, sans-serif;">Bringing you a world of flavors on your plate.</p>
+      <div>
+        <div class="menu1">
+          <div class="item1">
+            <img src="pizza1.png" alt="" width="100px" height="100px">
+            <h3>Pizza</h3>
+            <p>₹120</p>
+          </div>
+          <div class="item1">
+            <img src="paneer.png" alt="Paneer Image" width="100px" height="100px">
+            <h3>Paneer</h3>
+            <p>₹40</p>
+          </div>
+          <div class="item1">
+            <img src="Rasgulla.jpg" alt="" width="100px" height="100px">
+            <h3>Rasgulla</h3>
+            <p>₹50</p>
+          </div>
+          <div class="item1">
+            <img src="burger.png" alt="" width="100px" height="100px">
+            <h3>Burger</h3>
+            <p>₹80</p>
+          </div>
+          <div class="item1">
+            <img src="Samosa.png" alt="" width="100px" height="100px">
+            <h3>Samosa</h3>
+            <p>₹15</p>
+          </div>
+          <div class="item1">
+            <img src="Sandwich.png" alt="" width="100px" height="100px">
+            <h3>Sandwich</h3>
+            <p>₹70</p>
+          </div>
+          <div class="item1">
+            <img src="Gulabjamun.jpg" alt="" width="100px" height="100px">
+            <h3>Gulab jamun</h3>
+            <p>₹60</p>
+          </div>
+          <div class="item1">
+            <img src="frenchfires.jpg" alt="" width="100px" height="100px">
+            <h3>French-Fries</h3>
+            <p>₹80</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- about section -->
+  <div id="about-sec">
+
+
+    <div class="about-section">
+      <h1>About Us</h1><br>
+      <p id="p1">Bianca was made out of a desire to bring the captivating and enrapturing effervescence of a classic
+        Italian trattoria to the hub and bub that is Brisbane’s, James Street. The food shall be focussed on
+        perfecting simple, classic Italian dishes with a nod to the Australian climate and dining sphere, honouring
+        fresh produce and seasonality.</p>
+       <p id="p1"> We will be working from the foundation up, creating our own pastas and breads,
+        all in house. The wines work similarly; Italian in provenance or variety, they will serve to complement the
+        dishes as they would in their traditional homes. Our staff are warm, gracious and cannot wait to welcome you
+        into our home.</p>
+      </p>
+      <div id="img1">
+        <img src="img1.jpg" alt="" >
+      </div>
+      <div id="img2">
+        <img src="img2.jpg" alt="">
+      </div>
+      <div id="img3">
+        <img src="img33.jpg" alt="" >
+      </div>
+    </div>
+    
+
+    <!-- Contact -->
+    <div id="con-sec">
+
+
+      <div class="contact-section">
+        <section class="about_section layout_padding">
+          <div class="container">
+
+            <div class="contact-container">
+              <h1 style="font-size: 2em; font-family: Arial, Helvetica, sans-serif; text-align: left;">Contact Us</h1>
+              <br>
+              <p id="p1">
+                Email: snyrv.resto@gmail.com
+              </p>
+              <p id="p1">
+                Contact: (+0230)2421457,3265987
+              </p>
+              <p id="p1"> 
+                Address: Ichalkaranji 416115, Maharashtra, India.
+              </p>
+              <br>
+              <br>
+              <br>
+              
+
+      </div>
+    
+      <footer class="flex-all-center" style="margin-bottom: 0;" >
+
+        <p>
+          Copyright &copy; resto.com
+
+        </p>
+
+      </footer>
+
+    
+      <script src="javascript.js"></script>
+</body>
+
+</html>

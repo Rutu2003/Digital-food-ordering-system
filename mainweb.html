@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Order</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background-image: url("bg.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: black;
+		}
+
+		.container {
+			height: 0px;
+			padding-top: 0px;
+			margin-top: 0px;
+			width: 415px;
+			padding-bottom: 0px;
+			text-align: center;
+			margin-left: 50px;
+			margin-bottom: 60px;
+			margin-right: -73;
+		}
+
+		h1 {
+			font-size: 50px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		.input {
+			flex-direction: column;
+			align-items: center;
+			margin-right: -89px;
+			margin-left: 70px;
+		}
+
+		.output {
+			width: 100px
+		}
+
+		.microphone {
+			padding: 25px 25px;
+			font-size: 24px;
+			text-align: center;
+			align-items: center;
+			cursor: pointer;
+			outline: none;
+			color: #ffff;
+			background-color: #ff3f3f;
+			border: none;
+			border-radius: 10px;
+			margin-left: 80px;
+			width: 180px;
+		}
+
+		.microphone:hover {
+			background-color: #c51212;
+		}
+
+		#clear {
+			padding: 25px 25px;
+			font-size: 24px;
+			text-align: center;
+			cursor: pointer;
+			outline: none;
+			color: #fff;
+			background-color: #ff3f3f;
+			border: none;
+			border-radius: 10px;
+			width: 180px;
+		}
+
+		#clear:hover {
+			background-color: #c51212;
+		}
+
+		textarea {
+			height: 20px;
+			margin-bottom: 20px;
+			font-size: 18px;
+			resize: none;
+			text-align: center;
+			width: 59%;
+			padding-left: 10px;
+			margin-left: 29px;
+			height: 95px;
+			margin-top: 100px;
+			border-radius: 5px;
+		}
+
+		.menu {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			height: 750px;
+			padding: 20px;
+			margin-left: -50px;
+			margin-top: 17px;
+			margin-right: 45px;
+			width: 450px;
+			height: 00px;
+			width: 500px;
+			text-align: center;
+		}
+
+
+		.item {
+			background-color: #e4edf5;
+			padding: 20px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+			border: 2px solid #ccc;
+			margin-bottom: 20px;
+			padding-bottom: 0px;
+			padding-top: 5px;
+			width: 107.35px;
+			height: 200.117px;
+			height: 180.117px;
+		}
+
+		.abc {
+			display: flex;
+			margin-left: 50px;
+		}
+
+		.a {
+			font-size: 30px;
+			text-align: center;
+		}
+
+		#appbill {
+			width: 335px;
+			height: 480px;
+			margin-top: 50px;
+			margin-bottom: 5px;
+			margin-left: 50px;
+			margin-right: 1px;
+			border-radius: 15px 15px 0px 0px;
+			background: #ededf5;
+			border: 0.2px solid #000000;
+			box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+			position: relative;
+			/* Make parent div a positioning context */
+		}
+
+		#total {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: right;
+			padding-bottom: 5px;
+			margin-right: 5px;
+		}
+
+		.gen {
+			padding: 8px 8px;
+			font-size: 15px;
+			text-align: center;
+			cursor: pointer;
+			color: #000000;
+			background-color: #f8faf7;
+			border: 2px solid black;
+			border-radius: 0px 0px 0px 15px;
+			margin-left: 1135px;
+			width: 166px;
+			height: 40px;
+			margin-top: 0px;
+		}
+
+		.gen:hover {
+			background-color: #82ee4c;
+		}
+
+		.bck {
+			padding: 8px 8px;
+			font-size: 15px;
+			text-align: center;
+			cursor: pointer;
+			color: #000000;
+			background-color: #f8faf7;
+			border-radius: 0px 0px 15px 0px;
+			border: 2px solid black;
+			margin-left: 0px;
+			width: 166px;
+			height: 40px;
+			margin-top: 0px;
+		}
+
+		.bck:hover {
+			background-color: #82ee4c;
+		}
+		.pay {
+			padding: 8px 8px;
+			font-size: 15px;
+			text-align: center;
+			cursor: pointer;
+			color: #000000;
+			background-color: #f8faf7;
+			border: 2px solid black;
+			border-radius: 15px 15px 15px 15px;
+			margin-left: 1135px;
+			width: 336px;
+			height: 40px;
+			margin-top: 4px;
+		}
+
+		.pay:hover {
+			background-color: #82ee4c;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1 style="color: #e71818;text-align: center; font-size: 100px; margin: 0px;">Order Now</h1>
+	<div class="abc">
+		<div class="menu" style="font-family: Arial, Helvetica, sans-serif;">
+			<div class="item" style="border-radius: 15px;">
+				<img src="pizza1.png" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Pizza</h3>
+				<p style="margin-top: 0px;">₹120</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="burger.png" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Burger</h3>
+				<p style="margin-top: 0px;">₹80</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="coldcoffee.jpg" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Cold Coffee</h3>
+				<p style="margin-top: 0px;">₹80</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="paneer.png" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Paneer</h3>
+				<p style="margin-top: 0px;">₹40</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="Samosa.png" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Samosa</h3>
+				<p style="margin-top: 0px;">₹15</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="Sandwich2.jpg" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Sandwich</h3>
+				<p style="margin-top: 0px;">₹70</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="Rasgulla.jpg" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Rasgulla</h3>
+				<p style="margin-top: 0px;">₹50</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="Gulabjamun.jpg" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">Gulabjamun</h3>
+				<p style="margin-top: 0px;">₹60</p>
+			</div>
+			<div class="item" style="border-radius: 15px;">
+				<img src="frenchfires.jpg" alt="" width="100px" height="100px">
+				<h3 style="margin-top: 0px;">French_Fries</h3>
+				<p style="margin-top: 0px;">₹80</p>
+			</div>
+		</div>
+
+		<div class="container1">
+			<div class="input">
+				<textarea id="output" placeholder="Your Order is here...." readonly
+					style="text-align: center;"></textarea>
+				<button class="microphone" onclick="startSpeechRecognition()">Order</button>
+			</div>
+		</div>
+		<div id="appbill">
+			<h3 style="text-align: center;">Your Bill is here...</h3>
+			<table id="bill1">
+			</table>
+			<div id="total">
+
+			</div>
+
+		</div>
+	</div>
+	<button class="gen" onclick="generate()">Generate Bill</button>
+	<button class="bck" onclick="home()">Back to Home</button>
+	<button class="pay" onclick="payment()">Payment</button>
+
+	<script>
+		var sum = 0;
+		var list = []; //declaration
+		function startSpeechRecognition() {
+			const clearBtn = document.getElementById("clear");
+			const recognition = new webkitSpeechRecognition();
+			recognition.continuous = true;
+			recognition.maxAlternatives = 1;
+			recognition.interimResults = false;
+			recognition.lang = 'en-US';
+			recognition.start();
+			setTimeout(() => {
+				recognition.stop();
+			}, 20000);
+			recognition.onresult = function (event) {
+				let output = document.getElementById("output");
+				for (let i = event.resultIndex; i < event.results.length; i++) {
+					if (event.results[i].isFinal) {
+						output.value += event.results[i][0].transcript;
+					} else {
+						output.value += event.results[i][0].transcript;
+					}
+				}
+			}
+
+			
+		}
+
+
+		function generate() {
+			
+			let output = document.getElementById("output");
+			var value = output.value;
+			
+			if (value == "pizza") {
+				var price = 120;
+				
+
+			}
+			if (value == "burger") {
+				var price = 80;
+			
+
+			}
+			if (value == "french fries") {
+				var price = 80;
+				
+
+			}
+			if (value == "cold coffee") {
+				var price = 80;
+				
+
+			}
+			if (value == "paneer") {
+				var price = 40;
+			
+
+			}
+			if (value == "samosa") {
+				var price = 15;
+				
+
+			}
+			if (value == "sandwich") {
+				var price = 70;
+				
+			}
+			if (value == "rasgulla") {
+				var price = 50;
+		
+			}
+			if (value == "gulab jamun") {
+				var price = 60;
+		
+			}
+			
+			console.log(value);
+
+			list = [...list, { name: value, price: price, quantity: 1, total: price * 1 }];
+			console.log(list);
+			const div = document.getElementById("bill1");
+			div.innerHTML = "";
+			const tx = document.createElement("tr");
+
+			const nameTh = document.createElement("th");
+			nameTh.textContent = "Item Name";
+			tx.appendChild(nameTh);
+
+			const priceTh = document.createElement("th");
+			priceTh.textContent = "Price";
+			tx.appendChild(priceTh);
+
+			const quantityTh = document.createElement("th");
+			quantityTh.textContent = "Quantity";
+			tx.appendChild(quantityTh);
+
+			const totalTh = document.createElement("th");
+			totalTh.textContent = "Total";
+			tx.appendChild(totalTh);
+
+			div.appendChild(tx);
+			list.forEach((item) => {
+				const tr = document.createElement("tr");
+
+				const nameTd = document.createElement("td");
+				nameTd.textContent = item.name;
+				tr.appendChild(nameTd);
+
+				const priceTd = document.createElement("td");
+				priceTd.textContent = item.price;
+				tr.appendChild(priceTd);
+
+				const quantityTd = document.createElement("td");
+				quantityTd.textContent = item.quantity;
+				tr.appendChild(quantityTd);
+
+				const totalTd = document.createElement("td");
+				totalTd.textContent = item.total;
+				tr.appendChild(totalTd);
+
+				div.appendChild(tr);
+			});
+			sum = sum + price;
+		
+
+			const myDiv = document.getElementById("total");
+			myDiv.innerHTML = "Total : " + sum;
+
+		
+			let output1 = document.getElementById("output");
+			output1.value = "";
+
+		}
+		function home() {
+			window.open("index.html");
+		}
+
+		function payment(){
+  	    window.open("payment.html");
+        }
+
+
+		
+	</script>
+</body>
+
+</html>

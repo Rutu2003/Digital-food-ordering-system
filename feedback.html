@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url(bg.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+        form {
+          margin-top: 80px;
+          margin-left: 680px;
+    width: 500px;
+    /* margin: 0 auto; */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: 5px;
+    border-color: #e71818;
+  }
+
+  label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+    /* font-weight: bold; */
+  }
+  input[type="text"], textarea, input[type="tel"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+    </style>
+</head>
+<body>
+
+    <form action="feedback.php" method="post">
+
+      <center><h1>Feedback</h1></center>
+        <label for="namee">Name:</label>
+  <input type="text" id="namee" name="namee" required><br><br>
+
+  <label for="addr">Address:</label>
+  <textarea id="addr" name="addr" required></textarea><br><br>
+
+  Mobile Number: <br>
+  <input type="text" id="mobno" name="mobno" style="width:400px"  required><br><br>
+
+  <!-- <label for="sport type">Sport Type:</label>
+  <textarea id="sporttype" name="sporttype" required></textarea><br><br>
+
+  <label for="payment">Make Payment Here:</label><br>
+  <img src="QR.jpg" alt="qr code" style="height: 100px; width: 100px; margin-left: 180px;"><br><br>
+
+  <label for="file">Add Screenshot:</label><br>
+  <input type="file" id="screenshot" name="screenshot"> <br><br> -->
+     <label for="feedback">Feedback:</label>
+    <textarea placeholder="Type here....." id="feedback" name="feedback" style="height:80px;"></textarea>
+  <input type="submit" style="background-color: #e71818;" value="Submit">
+    </form>
+
+</body>
+</html>

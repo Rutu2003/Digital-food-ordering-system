@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("bg.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: black;
+        }
+        img {
+            
+            
+            width: 500px;
+        }
+        div {
+            
+            margin-top: 150px;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        h1 {
+            font-family:Arial, Helvetica, sans-serif;
+            color: rgb(198, 198, 198);
+        }
+        #feedback {
+      appearance: none;
+      background-color: #d2cfcf;
+      border-radius: 40em;
+      border-style: none;
+      box-shadow: #97aac3 0 -12px 6px inset;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -.24px;
+      margin: 0;
+      outline: none;
+      padding: 1rem 1.3rem;
+      quotes: auto;
+      text-align: center;
+      text-decoration: none;
+      transition: all .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      height: 60px;
+      width: 200px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    #feedback:hover {
+      background-color: #d2cfcf;
+      box-shadow: #97aac3 0 -12px 6px inset;
+      transform: scale(1.065);
+    }
+
+    #feedback:active {
+      transform: scale(1.025);
+    }
+
+    @media (min-width: 768px) {
+      #feedback {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <div>
+    <center><img src="qr.jpeg"></center>
+    <center><h1>SCAN AND PAY !</h1></center>
+    <center><button onclick="feed()" id="feedback">Feedback</button>
+    <button onclick="home()" id="feedback">Go to home</button></center>
+    </div>
+    <script>
+        function home() {
+			window.open("index.html");
+		}
+
+        function feed() {
+			window.open("feedback.html");
+		}
+    </script>
+</body>
+</html>
